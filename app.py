@@ -3,10 +3,13 @@ import pickle
 import string
 from nltk.corpus import stopwords
 import nltk
-
-nltk.download('stopwords')
-
+nltk.download('stopwords', quiet=True)  
+from nltk.corpus import stopwords
 STOP_WORDS = set(stopwords.words('english'))
+
+
+
+
 
 
 with open("fake_news_model.pkl", "rb") as f:
