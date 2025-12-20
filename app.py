@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import string
-from nltk.corpus import stopwords
+
 import nltk
 nltk.download('stopwords', quiet=True)  
 from nltk.corpus import stopwords
