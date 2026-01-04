@@ -1,7 +1,11 @@
 import streamlit as st
 import pickle, string, nltk
 from nltk.corpus import stopwords
+from theme import init_theme, theme_toggle, apply_theme
 
+init_theme()
+theme_toggle()
+apply_theme()
 nltk.download("stopwords")
 STOP_WORDS = set(stopwords.words("english"))
 
