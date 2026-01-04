@@ -2,7 +2,7 @@ import streamlit as st
 
 st.markdown("## 📄 Project Documentation")
 
-with open("Fake_News_Detection_Project_Report_Final.pdf", "rb") as pdf:
+with open("Fake_News_Detection_Project_Report.pdf", "rb") as pdf:
     st.download_button(
         "⬇️ Download Full Project Report (PDF)",
         pdf,
