@@ -11,13 +11,11 @@ init_theme()
 theme_toggle()
 apply_theme()
 
+
 st.markdown("""
-<h1 style="text-align:center;">📰 Fake News Detection AI</h1>
-<p style="text-align:center;">
-Explainable AI • NLP • ML Dashboard
-</p>
+<h1 style="text-align:center;">📰 Fake News Detection AI Platform</h1>
+<p style="text-align:center;">Explainable AI • NLP • ML Dashboard</p>
 """, unsafe_allow_html=True)
 
 st.divider()
-
-st.success("⬅️ Use the sidebar to navigate pages")
+st.info("⬅️ Use the sidebar to navigate pages")

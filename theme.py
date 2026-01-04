@@ -2,7 +2,7 @@ import streamlit as st
 
 def init_theme():
     if "dark_mode" not in st.session_state:
-        st.session_state.dark_mode = True
+        st.session_state.dark_mode = True  
 
 def theme_toggle():
     st.sidebar.markdown("## 🎨 Appearance")
@@ -11,36 +11,44 @@ def theme_toggle():
         value=st.session_state.dark_mode
     )
 
+
 def apply_theme():
     if st.session_state.dark_mode:
         st.markdown("""
         <style>
-        .stApp {
-            background: linear-gradient(135deg,#020617,#020617);
-            color: #e5e7eb;
-            transition: all 0.4s ease;
-        }
-        h1,h2,h3,h4,h5,h6 { color:#38bdf8; }
-        p, label, span, div { color:#e5e7eb !important; }
-        input, textarea {
-            background-color:#020617 !important;
-            color:white !important;
-        }
+        /* Background & page */
+        .stApp { background-color: #020617 !important; color: white !important; transition: all 0.4s ease; }
+
+        /* Headers */
+        h1, h2, h3, h4, h5, h6 { color: #38bdf8 !important; }
+
+        /* Paragraphs, labels, spans, divs */
+        p, label, span, div, strong { color: white !important; }
+
+        /* Inputs and text areas */
+        input, textarea { background-color: #020617 !important; color: white !important; }
+
+        /* Tables text */
+        td, th { color: white !important; }
+
         </style>
         """, unsafe_allow_html=True)
     else:
         st.markdown("""
         <style>
-        .stApp {
-            background: linear-gradient(135deg,#f8fafc,#e2e8f0);
-            color: #020617;
-            transition: all 0.4s ease;
-        }
-        h1,h2,h3,h4,h5,h6 { color:#1e40af; }
-        p, label, span, div { color:#020617 !important; }
-        input, textarea {
-            background-color:white !important;
-            color:#020617 !important;
-        }
+        /* Background & page */
+        .stApp { background-color: #f8fafc !important; color: black !important; transition: all 0.4s ease; }
+
+        /* Headers */
+        h1, h2, h3, h4, h5, h6 { color: #1e40af !important; }
+
+        /* Paragraphs, labels, spans, divs */
+        p, label, span, div, strong { color: black !important; }
+
+        /* Inputs and text areas */
+        input, textarea { background-color: white !important; color: black !important; }
+
+        /* Tables text */
+        td, th { color: black !important; }
         </style>
         """, unsafe_allow_html=True)
